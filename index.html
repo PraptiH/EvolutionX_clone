@@ -13,10 +13,132 @@
             background-color: rgb(11, 11, 36);
             overflow-x: hidden;
         }
+
+        #div1,
+        #div2,
+        #div3,
+        #div4 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100%;
+            filter: blur(80px);
+            animation: rotateAnim 10s infinite linear alternate;
+            transition: all;
+        }
+
+        #div2 {
+            background-color: blue;
+            animation: rotateAnim2 15s infinite linear alternate;
+        }
+
+        #div3 {
+            background-color: purple;
+            animation: rotateAnim3 15s infinite linear alternate;
+        }
+
+        #div4 {
+            background-color: yellow;
+            animation: rotateAnim4 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes rotateAnim {
+            0% {
+                translate: 0px 150px;
+            }
+
+            25% {
+                translate: 300px 150px;
+            }
+
+            50% {
+                translate: 600px 150px;
+            }
+
+            75% {
+                translate: 900px 150px;
+            }
+
+            100% {
+                translate: 1300px 0px;
+            }
+        }
+
+        @keyframes rotateAnim2 {
+            0% {
+                translate: 400px -500px;
+            }
+
+            25% {
+                translate: 800px -500px;
+            }
+
+            50% {
+                translate: 1200px 0px;
+            }
+
+            75% {
+                translate: 800px 0px;
+            }
+
+            100% {
+                translate: 400px -500px;
+            }
+        }
+
+        @keyframes rotateAnim3 {
+            0% {
+                translate: 600px -500px;
+            }
+
+            25% {
+                translate: 300px -500px;
+            }
+
+            50% {
+                translate: 0px 0px;
+            }
+
+            75% {
+                translate: 300px 0px;
+            }
+
+            100% {
+                translate: 600px -500px;
+            }
+        }
+
+        @keyframes rotateAnim4 {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            75% {
+                translate: 500px -500px;
+            }
+
+            100% {
+                translate: 700px -200px;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="absolute top-0 w-[100%] h-160">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+    </div>
     <!-- Navbar -->
     <div class="flex items-center justify-between mx-10 mt-10">
         <div>
@@ -120,7 +242,8 @@
         <div class="space-y-2">
             <img class="w-[50%]" src="./asssets/evolution.5e3d9ee0.svg" alt="">
             <p class="text-blue-600">#KeepEvolving</p>
-            <p class="text-white font-medium">Designed by <span class="underline font-normal cursor-pointer">Kshitij</span> & <span
+            <p class="text-white font-medium">Designed by <span
+                    class="underline font-normal cursor-pointer">Kshitij</span> & <span
                     class="underline font-normal cursor-pointer">Anierin Bliss</span></p>
         </div>
 
@@ -131,7 +254,8 @@
                 <img class="bg-white rounded-full p-2 cursor-pointer" src="./asssets/xlogo.38d87118.svg" alt="">
                 <img class="cursor-pointer" src="./asssets/donateicon.a6a6d17b.svg" alt="">
             </div>
-            <p class="text-white text-right pr-4 font-medium">Develoved by <span class="underline cursor-pointer">Anierin Bliss</span></p>
+            <p class="text-white text-right pr-4 font-medium">Develoved by <span
+                    class="underline cursor-pointer">Anierin Bliss</span></p>
         </div>
     </div>
 </body>
